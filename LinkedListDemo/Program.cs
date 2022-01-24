@@ -10,7 +10,11 @@ namespace LinkedListDemo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Linked List Demo Program to Understand Linked list Work Flow");
+            CustomLinkedList customLinkedList = new CustomLinkedList();
+            customLinkedList.AddNode(56);
+            customLinkedList.AddNode(30);
+            customLinkedList.AddNode(76);
+            customLinkedList.AddNode(80);
             Console.ReadLine();
         }
     }
