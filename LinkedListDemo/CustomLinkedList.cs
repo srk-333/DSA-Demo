@@ -85,5 +85,16 @@ namespace LinkedListDemo
             prev.next = newestNode;
             return this.head;
         }
+        //Method To delete First Node
+        public int DeleteFirstNode(int data)
+        {
+            if (this.head == null)
+            {
+                return 0;
+            }
+            int deleteNode = this.head.data;
+            this.head= this.head.next;
+            return deleteNode;
+        }
     }
 }
