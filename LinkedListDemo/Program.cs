@@ -18,12 +18,12 @@ namespace LinkedListDemo
         public void LinkedListCall()
         {
             CustomLinkedList customLinkedList = new CustomLinkedList();
-            customLinkedList.AddLastNode(56);
-            customLinkedList.AddLastNode(30);
-            customLinkedList.AddLastNode(70);
-            customLinkedList.DisplayLinkedList();
+            //customLinkedList.AddLastNode(56);
+            //customLinkedList.AddLastNode(30);
+            //customLinkedList.AddLastNode(70);
+            //customLinkedList.DisplayLinkedList();
             Console.WriteLine("-------------------------");
-            int node = customLinkedList.DeleteFirstNode(56);
+            int node = customLinkedList.DeleteFirstNode();
             Console.WriteLine("{0} node deleted",node);
             customLinkedList.DisplayLinkedList();
         }
