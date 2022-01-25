@@ -96,5 +96,27 @@ namespace LinkedListDemo
             this.head= this.head.next;
             return deleteNode;
         }
+        //Method to delete Last Node
+        public int DeleteLastNode()
+        {
+            Node newNode = this.head;
+            if (this.head == null)
+            {
+                return 0;
+            }
+            if (this.head.next == null)
+            {
+                this.head = null;
+                return 0;
+            }
+            //checking for tail Node.
+            while (newNode.next.next != null)
+            {
+                newNode = newNode.next;
+            }
+            int deleteLastNode = newNode.next.data;
+            newNode.next = null;
+            return deleteLastNode;
+        }
     }
 }
