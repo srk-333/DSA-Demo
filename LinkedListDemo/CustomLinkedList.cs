@@ -71,6 +71,12 @@ namespace LinkedListDemo
             {
                 return newestNode;
             }
+            if (position == 0)
+            {
+                newestNode.next = this.head;
+                this.head = newestNode;
+                return this.head;
+            }
             //Node Exchange
             Node prev = null;
             Node current = this.head;
@@ -122,16 +128,17 @@ namespace LinkedListDemo
         public int SearchNode(int value)
         {
             Node temp = this.head;
+            int count = 0;
             while (temp != null)
             {
                 if (temp.data == value)
                 {
-                    return value;
+                    return count;
                 }
                 temp = temp.next;
+                count++;
             }
-            Console.WriteLine("{0} is not a Linked List Node",value);
-            return 0;
+            return count;
         }
     }
 }
