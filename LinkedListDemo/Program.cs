@@ -20,12 +20,14 @@ namespace LinkedListDemo
             CustomLinkedList customLinkedList = new CustomLinkedList();
             customLinkedList.AddLastNode(56);
             customLinkedList.AddLastNode(30);
+            customLinkedList.AddLastNode(40);
             customLinkedList.AddLastNode(70);
             customLinkedList.DisplayLinkedList();
             Console.WriteLine("-------------------------");
-            int node = customLinkedList.SearchNode(30);
-            customLinkedList.InsertAtParticularPosition(node + 1, 40);
+            int key = customLinkedList.SearchNode(40);
+            customLinkedList.DeleteAtParticularPosition(key);
             customLinkedList.DisplayLinkedList();
+            customLinkedList.Size();
         }
     }
 }
