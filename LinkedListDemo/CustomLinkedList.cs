@@ -20,16 +20,22 @@ namespace LinkedListDemo
             }
             else
             {
-                //Temp Node to work.
-                Node temp = head;
-                //Loop to check next pointer in Node.
-                while (temp.next != null)
-                {
-                    temp = temp.next;
-                }
-                temp.next = node;
+                var lastNode = GetLastNode();             
+                lastNode.next = node;
             }
             Console.WriteLine("inserted into node: "+node.data);
+        }
+
+        public Node GetLastNode()
+        {
+            //Temp Node to work.
+            Node temp = head;
+            //Loop to check next pointer in Node.
+            while (temp.next != null)
+            {
+                temp = temp.next;
+            }
+            return temp;
         }
     }
 }
