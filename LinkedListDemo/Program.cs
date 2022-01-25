@@ -17,10 +17,12 @@ namespace LinkedListDemo
 
         public void LinkedListCall()
         {
-            CustomLinkedList customLinkedList = new CustomLinkedList();          
-            customLinkedList.AppendLinkedList(56);
-            customLinkedList.AppendLinkedList(30);
-            customLinkedList.AppendLinkedList(70);
+            CustomLinkedList customLinkedList = new CustomLinkedList();
+            customLinkedList.AddLastNode(56);
+            customLinkedList.AddLastNode(70);
+            customLinkedList.DisplayLinkedList();
+            Console.WriteLine("-------------------------");
+            customLinkedList.InsertAtParticularPosition(1,30);
             customLinkedList.DisplayLinkedList();
         }
     }
