@@ -33,7 +33,7 @@ namespace LinkedListDemo
         //Display Method
         public void DisplayLinkedList()
         {
-            Console.WriteLine("Display nodes of Linked List");            
+            Console.WriteLine("Display nodes of Linked List");
             Node temp = this.head;
             if (temp == null)
             {
@@ -86,7 +86,7 @@ namespace LinkedListDemo
                 return 0;
             }
             int deleteNode = this.head.data;
-            this.head= this.head.next;
+            this.head = this.head.next;
             return deleteNode;
         }
         //Method to delete Last Node
@@ -122,7 +122,7 @@ namespace LinkedListDemo
                 {
                     return count;
                 }
-                temp = temp.next;  
+                temp = temp.next;
                 count++;
             }
             return count;
@@ -131,7 +131,7 @@ namespace LinkedListDemo
         public void DeleteAtParticularPosition(int position)
         {
             Node temp = this.head;
-            for (int i = 0; temp != null && i < position-1; i++)
+            for (int i = 0; temp != null && i < position - 1; i++)
             {
                 temp = temp.next;
             }
@@ -153,7 +153,7 @@ namespace LinkedListDemo
                 temp = temp.next;
                 count++;
             }
-            Console.WriteLine("Size of Linked List:"+count);
+            Console.WriteLine("Size of Linked List:" + count);
         }
     }
 }
